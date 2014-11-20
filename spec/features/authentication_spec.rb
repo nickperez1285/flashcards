@@ -1,4 +1,4 @@
-require_relative 'spec_helper'
+require_relative '../spec_helper'
 
 describe "users_controller" do
   describe "GET /login" do
@@ -15,10 +15,9 @@ describe "users_controller" do
     it "successfully creates a new user" do
       # given
       # when
-      @user = User.create(name: "Han", password: "boom")
+      post '/new_user', name: "Han", password: "boom"
       # then
-      user = User.last
-      expect(user.id).to eq(@user.id)
+      expect { User.count }.to change { User.count }.by(1)
     end
   end
 
@@ -27,7 +26,7 @@ describe "users_controller" do
       # given
       @user = User.create(name: "Valerie", password: "boom")
       # when
-      post '/new_session'
+      post '/new_session', name: "Valerie" password: "boom"
       # then
       expect(session["user_id"]).to eq(@user.id)
     end
@@ -42,5 +41,48 @@ describe "users_controller" do
       # then
       expect(session["user_id"]).to eq(nil)
     end
+  end
+
+  describe "POST /user/:user_id/delete_session" do
+    it "successfully redirects to homepage after logging out" do
+      # given
+      @user = User.create(name: "Valerie", password: "boom")
+      # when
+      post '/new_session?name=Valerie&password=boom'
+      post '/user/#{@user.id}/delete_session'
+      # then
+      expect(page).to have_content 'Welcome'
+    end
+  end
+
+  describe "POST /new_user" do
+    it "successfully encrypts and stores password_hash" do
+      # given
+      # when
+      post "/new_user", name: "Han", password: "boom"
+      # then
+      User.last.password_hash.should == "boom"
+    end
+  end
+
+  describe "POST /new_session" do
+    it "checks authentication and redirects to correct page when logged in"
+    # given
+    @user = User.create(name: "Valerie", password: "boom")
+    # when
+    post '/new_session', name: "Valerie", password: "boom"
+    # then
+    expect(page).to have_content 'New Game'
+  end
+
+  describe "POST /user/:user_id/delete_session" do
+    it "checks authentication and redirects to correct page when logged out"
+    # given
+    @user = User.create(name: "Valerie", password: "boom")
+    post '/new_session?name=Valerie&password=boom'
+    # when
+    post '/user/#{@user.id}/delete_session'
+    # then
+    expect(page).to have_content 'Welcome'
   end
 end
