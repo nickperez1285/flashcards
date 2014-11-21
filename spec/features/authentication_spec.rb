@@ -26,7 +26,7 @@ describe "users_controller" do
       # given
       @user = User.create(name: "Valerie", password: "boom")
       # when
-      post '/new_session', name: "Valerie" password: "boom"
+      post '/new_session', name: "Valerie", password: "boom"
       # then
       expect(session["user_id"]).to eq(@user.id)
     end
@@ -66,23 +66,25 @@ describe "users_controller" do
   end
 
   describe "POST /new_session" do
-    it "checks authentication and redirects to correct page when logged in"
-    # given
-    @user = User.create(name: "Valerie", password: "boom")
-    # when
-    post '/new_session', name: "Valerie", password: "boom"
-    # then
-    expect(page).to have_content 'New Game'
+    it "checks authentication and redirects to correct page when logged in" do
+      # given
+      @user = User.create(name: "Valerie", password: "boom")
+      # when
+      post '/new_session', name: "Valerie", password: "boom"
+      # then
+      expect(page).to have_content 'New Game'
+    end
   end
 
   describe "POST /user/:user_id/delete_session" do
-    it "checks authentication and redirects to correct page when logged out"
-    # given
-    @user = User.create(name: "Valerie", password: "boom")
-    post '/new_session?name=Valerie&password=boom'
-    # when
-    post '/user/#{@user.id}/delete_session'
-    # then
-    expect(page).to have_content 'Welcome'
+    it "checks authentication and redirects to correct page when logged out" do
+      # given
+      @user = User.create(name: "Valerie", password: "boom")
+      post '/new_session?name=Valerie&password=boom'
+      # when
+      post '/user/#{@user.id}/delete_session'
+      # then
+      expect(page).to have_content 'Welcome'
+    end
   end
 end

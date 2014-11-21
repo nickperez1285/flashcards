@@ -1,0 +1,11 @@
+<h1>Sign In</h1>
+
+<% if @error %>
+  <p><%= @error %></p>
+<% end %>
+
+<form action="/new_session" method="post">
+  Email: <input type="text" name="email" placeholder="example@example.com">
+  Password: <input type="password" name="password">
+  <input type="submit" value="Sign In">
+</form>
