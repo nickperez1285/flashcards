@@ -1,7 +1,7 @@
 <%= @card.question %>
-<%= @counter %>
+<p><%= @counter %></p>
 
-<form action= "/cards/<%=@card.id%>/compare" method= 'get'>
+<form action= "/cards/:id/compare" method= 'post'>
 
 <input type="text" name= "submitted_answer" />
 

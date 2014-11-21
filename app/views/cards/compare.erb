@@ -1,0 +1,8 @@
+<% if @submitted_answer == @card.answer %>
+<%@counter = 0%>
+<%= @counter %>
+<p>GOOD JOB!</p>
+<% else %>
+<p>BAD JOB!</p>
+@counter += 1
+<% end %>
