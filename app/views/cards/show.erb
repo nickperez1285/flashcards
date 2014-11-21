@@ -1,10 +1,11 @@
 
 <%= @card.question %>
-<p><%= @session %></p>
 
 <div class="notice">
   <p><%= @message %></p>
 </div>
+
+<a href="/games/<%= @game.id %>/over">end game</a>
 
 <form action= "/games/<%= @game.id %>/decks/<%= @deck.id %>/cards/<%= @card.id %>/compare" method= 'get'>
 
