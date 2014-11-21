@@ -1,5 +1,5 @@
 <div class="index_container">
-  <h1>Sign Up</h1>
+  <h1 class="login-header">Sign Up</h1>
 
   <% if @error %>
     <p><%= @error %></p>
@@ -7,14 +7,14 @@
 
   <form action="/new_user" method="post">
     <div class="input-box">
-      <input type="text" name="user[name]" placeholder="name">
+      <input type="text" name="user[name]" placeholder="what mom calls you">
     </div>
     <div class="input-box">
-      <input type="text" name="user[email]" placeholder="email">
+      <input type="text" name="user[email]" placeholder="pedro@bassassins.com">
     </div>
     <div class="input-box">
-      <input type="password" name="user[password]" placeholder="password">
-    <input type="submit" value="I'm ready">
+      <input type="password" name="user[password]" placeholder="e.g. can't be boom">
+    <input type="submit" value="I'm in.">
     </div>
   </form>
 </div>
