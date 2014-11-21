@@ -1,5 +1,5 @@
 get '/' do
-  # render root page
+  @user = current_user
   erb :index
 end
 
