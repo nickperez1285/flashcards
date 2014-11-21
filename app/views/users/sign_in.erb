@@ -1,11 +1,19 @@
-<h1>Sign In</h1>
+<div class="index_container">
+  <h1 class="login-header">Sign In</h1>
+  <% if @message %>
+    <p><%= @message %></p>
+  <% end %>
+  <% if @error %>
+    <p><%= @error %></p>
+  <% end %>
 
-<% if @error %>
-  <p><%= @error %></p>
-<% end %>
-
-<form action="/new_session" method="post">
-  Email: <input type="text" name="email" placeholder="example@example.com">
-  Password: <input type="password" name="password">
-  <input type="submit" value="Sign In">
-</form>
+  <form action="/new_session" method="post">
+    <div class="input-box">
+      <input type="text" name="email" placeholder="penelope@largemouth.ly.io.me">
+    </div>
+    <div class="input-box">
+      <input type="password" name="password" placeholder="enter your boom">
+      <input type="submit" value="let's go">
+    </div>
+  </form>
+</div>

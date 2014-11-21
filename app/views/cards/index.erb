@@ -1,10 +1,9 @@
 <h2 class="header"><i class="fa fa-bolt"></i></h2>
-<div class="notice"><p>"<%= @message %>"</p></div><!-- Notice -->
+<div class="notice"><p>"<%= @deck.title %>"</p></div>
 
 <div class="index_container">
   <div class="deck-container">
-    <% @decks.each do |deck| %>
-    <a href ="/decks/<%= deck.id %>/cards">
+    <% @cards.each do |card| %>
       <div class="deck">
         <div class="red-line"></div>
         <div class="blue-line"></div>
@@ -16,11 +15,11 @@
         <div class="blue-line"></div>
         <div class="blue-line"></div>
         <div class="deck-description">
-          <p class="deck-title"><%= deck.title %></p>
-          <p class="deck-body">cards: <%= deck.cards.count %></p>
+          <p class="deck-title"><%= card.answer %></p>
+          <br>
+          <p class="deck-body"><%= card.question %></p>
         </div>
-      </div><!-- Each deck container -->
-    </a>
+      </div><!-- Each card deck-container -->
     <% end %>
-  </div><!-- Deck List Container -->
+  </div><!-- Deck container -->
 </div><!-- Index container -->

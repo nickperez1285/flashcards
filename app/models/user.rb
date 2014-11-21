@@ -2,8 +2,8 @@ class User < ActiveRecord::Base
   include BCrypt
   # associations here later
 
-  validates :name, :email, :password_hash, presence: true
-  validates_uniqueness_of :email
+  # validates :name, :email, :password_hash, presence: true
+  # validates_uniqueness_of :email
 
   def password
     @password ||= Password.new(password_hash)
@@ -15,6 +15,6 @@ class User < ActiveRecord::Base
   end
 
   def authenticate(plaintext)
-    (self.password == plaintext) ? true : false
+    self.password == plaintext
   end
 end
