@@ -8,5 +8,14 @@ describe "Game Logic" do
     expect(last_response.body).to include(@card.question)
     end
   end
+
+  describe "Our card has an entry field"
+    it "returns true for the correct answer"
+     params[:submitted_answer] = "yes"
+    get "cards/1/compare"
+
+
+    end
+  end
 end
 
