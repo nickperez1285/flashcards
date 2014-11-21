@@ -8,14 +8,6 @@ get '/sign_in' do
   erb :"/users/sign_in"
 end
 
-get '/games/new' do
-  # render the new game/menu page
-  if current_user
-    @user = current_user
-  end
-    erb :"/games/new"
-end
-
 post '/new_session' do
   # logs user in, sets session user id and redirect new game page
 

@@ -1,7 +1,11 @@
-<ul>
-<%@decks.each do |deck|%>
- <li><a href = "/decks/<%=deck.id%>/cards/1"><%=deck.title%></a></li>
- <li># of cards: <%=deck.cards.count%></li>
-<% end %>
-
-</ul>
+<h2 class="header">flashcard.</h2>
+<div class="notice"><p>"<%= @message %>"</p></div>
+<div class="index_container">
+  <ul>
+    <% @decks.each do |deck| %>
+      <li><a href = "/decks/<%= deck.id %>/cards/1">
+        <%= deck.title %></a></li>
+      <li># of cards: <%= deck.cards.count %></li>
+    <% end %>
+  </ul>
+</div>

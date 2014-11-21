@@ -1,1 +1,12 @@
-<h1>Welcome to Flashcards!</h1>
+<div class="index_container">
+  <% if @message %>
+    <p class="notice"><%= @message %></p>
+  <% end %>
+  <i class="fa fa-bolt"></i>
+  <h1>Flash</h1>
+
+  <div class="play_btn">
+    <a href="/games/new">enter</a>
+  </div>
+</div>
+

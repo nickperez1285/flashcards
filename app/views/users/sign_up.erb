@@ -1,13 +1,20 @@
-<h1>Sign up</h1>
+<div class="index_container">
+  <h1>Sign Up</h1>
 
-<% if @error %>
-  <p><%= @error %></p>
-<% end %>
+  <% if @error %>
+    <p><%= @error %></p>
+  <% end %>
 
-<form action="/new_user" method="post">
-  Name: <input type="text" name="user[name]" placeholder="what your mom calls you">
-  Email: <input type="text" name="user[email]" placeholder="example@example.com">
-  Password: <input type="password" name="user[password]">
-  <input type="submit" value="login">
-</form>
-
+  <form action="/new_user" method="post">
+    <div class="input-box">
+      <input type="text" name="user[name]" placeholder="name">
+    </div>
+    <div class="input-box">
+      <input type="text" name="user[email]" placeholder="email">
+    </div>
+    <div class="input-box">
+      <input type="password" name="user[password]" placeholder="password">
+    <input type="submit" value="I'm ready">
+    </div>
+  </form>
+</div>
