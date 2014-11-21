@@ -5,15 +5,15 @@ end
 
 get '/sign_in' do
   # renders login page
-  erb :"users/sign_in"
+  erb :"/users/sign_in"
 end
 
 get '/games/new' do
   # render the new game/menu page
   if current_user
     @user = current_user
-    erb :"games/new"
   end
+    erb :"/games/new"
 end
 
 post '/new_session' do
@@ -25,24 +25,24 @@ post '/new_session' do
     redirect '/games/new'
   else
     @error = "Incorrect login information, please try again."
-    erb :"users/sign_in"
+    erb :"/users/sign_in"
   end
 end
 
 get '/sign_up' do
   # registers a new user
-  erb :"users/sign_up"
+  erb :"/users/sign_up"
 end
 
 post '/new_user' do
   # creates new users
   if user = User.new(params[:user])
-    session["user_id"] = user.id
     user.save
+    session["user_id"] = user.id
     redirect '/games/new'
   else
     @error = "Invalid email/password"
-    erb :'users/sign_up'
+    erb :'/users/sign_up'
   end
 end
 
