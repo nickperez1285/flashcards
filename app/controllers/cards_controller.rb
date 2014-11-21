@@ -15,7 +15,7 @@ get '/games/:game_id/decks/:deck_id/cards/:card_id/compare' do
   card = Card.find(params[:card_id])
   deck = Deck.find(params[:deck_id])
   game = Game.find(params[:game_id])
-  submitted_answer = (params[:submitted_answer])
+  submitted_answer = (params[:submitted_answer]).downcase
   if session["counter"] < 3
     if card.answer == submitted_answer # get right answer
     game.score += 1
@@ -31,4 +31,7 @@ get '/games/:game_id/decks/:deck_id/cards/:card_id/compare' do
   end
 end
 
+get '/games/:game_id/over' do
+
+end
 
