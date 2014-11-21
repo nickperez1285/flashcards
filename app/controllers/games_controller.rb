@@ -9,3 +9,20 @@ get '/games/new' do
     erb :"/users/sign_in"
   end
 end
+
+post '/games/create' do
+  deck = Deck.find(params[:deck_id])
+  game = Game.create(deck_id: deck.id, user_id: current_user.id)
+  session["counter"] = 0
+  session["card_order"] = deck.cards.map { |card| card.id }.shuffle
+  redirect "/games/#{game.id}/decks/#{deck.id}/cards/#{session["card_order"].pop}"
+end
+
+get '/games/:game_id/decks/:deck_id/cards/:card_id' do
+  @card = Card.find(params[:card_id])
+  @deck = Deck.find(params[:deck_id])
+  @game = Game.find(params[:game_id])
+  @user = current_user
+
+  erb :"cards/show"
+end

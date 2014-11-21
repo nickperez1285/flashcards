@@ -1,0 +1,17 @@
+
+<%= @card.question %>
+<p><%= @session %></p>
+
+<div class="notice">
+  <p><%= @message %></p>
+</div>
+
+<form action= "/games/<%= @game.id %>/decks/<%= @deck.id %>/cards/<%= @card.id %>/compare" method= 'get'>
+
+<input type="text" name= "submitted_answer" />
+
+<input type="submit" vaule="Submit">
+</form>
+
+
+
