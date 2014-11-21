@@ -3,7 +3,7 @@ class CreateGames < ActiveRecord::Migration
     create_table :games do |t|
       t.references :user
       t.references :deck
-      t.integer    :score
+      t.integer    :score, default: 0
 
       t.timestamps
     end
