@@ -19,10 +19,19 @@ post '/games/create' do
 end
 
 get '/games/:game_id/decks/:deck_id/cards/:card_id' do
+  @message = params[:message]
   @card = Card.find(params[:card_id])
   @deck = Deck.find(params[:deck_id])
   @game = Game.find(params[:game_id])
   @user = current_user
 
   erb :"cards/show"
+end
+
+get '/games/:game_id/over' do
+  @user = current_user
+  @game = Game.find(params[:game_id])
+  @deck = @game.deck
+
+  erb :"games/over"
 end
