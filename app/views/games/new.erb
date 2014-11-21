@@ -1,1 +1,7 @@
-<h1>let's play</h1>
+<ul>
+<%@decks.each do |deck|%>
+ <li><a href = "/decks/<%=deck.id%>/cards/1"><%=deck.title%></a></li>
+ <li># of cards: <%=deck.cards.count%></li>
+<% end %>
+
+</ul>

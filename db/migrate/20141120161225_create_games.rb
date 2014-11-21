@@ -1,6 +1,6 @@
 class CreateGames < ActiveRecord::Migration
   def change
-    create_table do |t|
+    create_table :games do |t|
       t.references :user
       t.references :deck
       t.integer    :score
