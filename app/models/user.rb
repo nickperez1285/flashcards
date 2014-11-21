@@ -15,6 +15,6 @@ class User < ActiveRecord::Base
   end
 
   def authenticate(plaintext)
-    (self && Password.new(self.password_hash) == plaintext) ? true : false
+    (self.password == plaintext) ? true : false
   end
 end

@@ -39,7 +39,7 @@ post '/new_user' do
   if user = User.new(params[:user])
     session["user_id"] = user.id
     user.save
-    redirect '/new'
+    redirect '/games/new'
   else
     @error = "Invalid email/password"
     erb :'users/sign_up'
