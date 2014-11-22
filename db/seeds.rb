@@ -2,10 +2,13 @@
 
 
 
+
   deck1 = Deck.create(title: "Beers & Books")
   deck2= Deck.create(title: "Num Nums")
   deck3= Deck.create(title: "DBC 123")
   deck4= Deck.create(title: "Largemouth Bass Trivia")
+
+
 
 
  deck1.cards << Card.create(question: "This tasty beer is a brown ale from England", answer:"new castle" )
@@ -16,11 +19,11 @@
 
 
 
- deck2.cards << Card.create(question: " This restaurant serves up burrito sized servings of sushi", answer: "sushiritto" )
+ deck2.cards << Card.create(question: " This restaurant serves up burrito sized servings of sushi", answer: "sushirrito" )
  deck2.cards << Card.create(question: "This restuarant recently gave out free food that was as delicious as it was unhealthy ", answer: "the Melt")
  deck2.cards << Card.create(question: "Pop Eye the Sailorman loves this stuff", answer: "spinach" )
  deck2.cards << Card.create(question: " Italian cheesy pepporoni goodness", answer: "pizza")
- deck2.cards << Card.create(question: " This place has an all you can eat lunch buffet with 5-Star rated wings and pretty ladies that are allergic to clothes" , answer: "gold club")
+
 
  deck3.cards << Card.create(question: " This student is rumored to be the descendant of Einstein", answer: "andy archer" )
  deck3.cards << Card.create(question: " This teacher often wears elegant neon parachute pants and happens to have several pairs of them" , answer:"stu" )
