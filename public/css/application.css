@@ -1,0 +1,444 @@
+@import url(http://fonts.googleapis.com/css?family=Gloria+Hallelujah);
+@import url(http://fonts.googleapis.com/css?family=Cousine);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300);
+
+/* General */
+
+a, .btn {
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+a:hover, .btn:hover {
+  transition: all 0.2s ease;
+}
+
+body {
+  padding-top: 100px;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+::-webkit-input-placeholder {
+   color: #D5D5D5;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #D5D5D5;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #D5D5D5;
+}
+
+:-ms-input-placeholder {
+   color: #D5D5D5;
+}
+
+.notice {
+  color: #A4A4A4;
+  text-align: center;
+  width: 80%;
+  margin: 2% auto;
+}
+
+.game-notice {
+  color: #A4A4A4;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 1.1em;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Navbar */
+
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.navbar {
+  width: 95%;
+  height: 70px;
+  padding-top: 1%;
+}
+
+.login_container {
+  text-align: right;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.login_container a, .login_container form {
+  margin-left: 1%;
+  display: inline-block;
+  color: #A4A4A4;
+  font-size: 0.9em;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+}
+
+.login_container a:hover {
+  opacity: 0.8;
+  color: #094E91;
+  transition: all 0.2s ease;
+}
+
+.logo {
+  font-size: 2em;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  text-shadow: 1px 1px #81B3E4;
+}
+
+
+.logo i {
+  color: #094E91;
+}
+
+.header {
+  font-size: 3em;
+  text-align: center;
+  padding: 0;
+  margin: 0 0 1% 0;
+  text-shadow: 1px 1px #81B3E4;
+}
+
+.header i {
+  color: #094E91;
+  font-size: 1em;
+}
+
+.name {
+  color: #1269BD;
+}
+
+/* Landing Page */
+
+.index_container {
+  width: 75%;
+  margin: 3% auto 0 auto;
+  text-align: center;
+}
+
+.index_container i {
+  font-size: 3em;
+}
+
+.index_container h1 {
+  letter-spacing: 1.5em;
+  text-transform: uppercase;
+  margin-right: -5%;
+  margin-bottom: 8%;
+}
+
+.play_btn a {
+  padding: 2% 7%;
+  width: 25%;
+  font-size: 2em;
+  color: #FFCE88;
+  background-color: #FFAC34;
+  box-shadow: 1px 1px 1px #DF8400;
+  transition: all 0.2s ease;
+}
+
+.play_btn a:hover {
+  opacity: 0.7;
+  box-shadow: none;
+  transition: all 0.2s ease;
+}
+
+/* Sign in/out */
+
+.input-box {
+  display: block;
+  width: 100%;
+  margin: 2% auto;
+}
+
+.input-box input[type="text"], .input-box input[type="password"] {
+  width: 100%;
+  height: 70px;
+  text-align: center;
+  font-size: 2em;
+  color: #094E91;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.input-box input[type="submit"] {
+  color: #FFCE88;
+  background-color: #FFAC34;
+  box-shadow: 1px 1px 1px #DF8400;
+  border: none;
+  margin-top: 8%;
+  padding: 5% 10%;
+  font-size: 2em;
+  transition: all 0.3s ease;
+}
+
+.input-box input[type="submit"]:hover {
+  opacity: 0.7;
+  box-shadow: none;
+  transition: all 0.3s ease;
+}
+
+.login_container input[type="submit"] {
+  color: #A4A4A4;
+  font-size: 0.9em;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  border: none;
+  background-color: transparent;
+ }
+
+.login_container input[type="submit"]:hover {
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.login-header {
+  color: #094E91;
+  text-shadow: 1px 1px #81B3E4;
+  margin: 0;
+  padding: 0;
+}
+
+.login-name {
+  color: #A4A4A4;
+  position: absolute;
+  font-size: 0.9em;
+  top: 0;
+  left: 0;
+  padding: 1%;
+  transition: all 0.2s ease;
+}
+
+/* Main menu page */
+
+.deck-container {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.deck {
+  width: 31%;
+  height: 130px;
+  display: inline-block;
+  float: left;
+  margin: 2% 1%;
+  box-shadow: 1px 1px 1px #D8D8D8;
+  padding: 5% 0 2% 0;
+  background-color: #FBFBFB;
+  opacity: 0.8;
+  position: relative;
+  transition: all 0.2s ease;
+  opacity: 0.4;
+}
+
+.deck:hover {
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+
+.deck-description a, p {
+  width: 85%;
+  position: relative;
+  z-index: 20;
+  margin: 0 auto 1% auto;
+}
+
+.deck-title {
+  font-family: 'Gloria Hallelujah', cursive;
+  color: #1F1F1F;
+  font-size: 1.5em;
+}
+
+.deck-body {
+  font-family: 'Cousine', ;
+  color: #1F1F1F;
+  font-size: 1.1em;
+}
+
+.menu-header {
+  text-align: center;
+  color: #FF7634;
+  font-size: 1.5em;
+  font-family: 'Gloria Hallelujah', cursive;
+  margin: 0;
+  padding: 0;
+}
+
+.play-game-btn {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.play-game-btn input[type="submit"] {
+  border: none;
+  display: inline-block;
+  text-align: center;
+  margin: 0 0 0 1%;
+  padding: 1% 5%;
+  width: 28%;
+  height: 55px;
+  font-size: 2em;
+  color: #FFCE88;
+  background-color: #FFAC34;
+  box-shadow: 1px 1px 1px #DF8400;
+  transition: all 0.2s ease;
+}
+
+.play-game-btn input[type="submit"]:hover {
+  opacity: 0.7;
+  box-shadow: none;
+  transition: all 0.2s ease;
+}
+
+.play-game-btn input[type="text"] {
+  width: 70%;
+  margin: 0;
+  display: inline-block;
+  float: left;
+  height: 50px;
+  text-align: center;
+  font-size: 2em;
+  color: #094E91;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.end-container {
+  width: 85%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.end-game-btn input[type="submit"] {
+  border: none;
+  text-align: center;
+  margin: 0 auto;
+  padding: 1% 5%;
+  width: 15%;
+  height: 55px;
+  font-size: 2em;
+  color: #FE878D;
+  background-color: #FC333D;
+  box-shadow: 1px 1px 1px #DB000B;
+  transition: all 0.2s ease;
+}
+
+.end-game-btn input[type="submit"]:hover {
+  opacity: 0.7;
+  box-shadow: none;
+  transition: all 0.2s ease;
+}
+
+.card {
+  width: 100%;
+  height: 300px;
+  display: inline-block;
+  float: left;
+  margin: 2% auto;
+  box-shadow: 1px 1px 1px #D8D8D8;
+  padding: 5% 0 2% 0;
+  background-color: #FBFBFB;
+  opacity: 0.8;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+/* Flashcard */
+
+  .red-line {
+    position: absolute;
+    top: 10%;
+    height: 0;
+    width: 100%;
+    border-top: 1px solid red;
+  }
+
+  .blue-line:first-child {
+    position: absolute;
+    top: 15%;
+    height: 0;
+    width: 100%;
+    border-top: 1px solid #95A5FE;
+    z-index: 5;
+  }
+
+  .blue-line:nth-child(2) {
+    position: absolute;
+    top: 25%;
+    height: 0;
+    width: 100%;
+    border-top: 1px solid #95A5FE;
+    z-index: 5;
+  }
+
+  .blue-line:nth-child(3) {
+    position: absolute;
+    top: 35%;
+    height: 0;
+    width: 100%;
+    border-top: 1px solid #95A5FE;
+    z-index: 5;
+  }
+
+  .blue-line:nth-child(4) {
+    position: absolute;
+    top: 45%;
+    height: 0;
+    width: 100%;
+    border-top: 1px solid #95A5FE;
+    z-index: 5;
+  }
+
+  .blue-line:nth-child(5) {
+    position: absolute;
+    top: 55%;
+    height: 0;
+    width: 100%;
+    border-top: 1px solid #95A5FE;
+    z-index: 5;
+  }
+
+  .blue-line:nth-child(6) {
+    position: absolute;
+    top: 65%;
+    height: 0;
+    width: 100%;
+    border-top: 1px solid #95A5FE;
+    z-index: 5;
+  }
+
+  .blue-line:nth-child(7) {
+    position: absolute;
+    top: 75%;
+    height: 0;
+    width: 100%;
+    border-top: 1px solid #95A5FE;
+    z-index: 5;
+  }
+
+  .blue-line:nth-child(8) {
+    position: absolute;
+    top: 85%;
+    height: 0;
+    width: 100%;
+    border-top: 1px solid #95A5FE;
+    z-index: 5;
+  }
+
