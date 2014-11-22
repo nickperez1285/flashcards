@@ -1,0 +1,5 @@
+<% @games.each do |game| %>
+
+<%= game.deck.title %> : <%= game.score %> out of  <%= game.deck.cards.size %>
+
+<% end %>
