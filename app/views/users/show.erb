@@ -1,5 +1,9 @@
-<% @games.each do |game| %>
-
-<%= game.deck.title %> : <%= game.score %> out of  <%= game.deck.cards.size %>
-
-<% end %>
+<div class="index_container">
+  <h2 class="menu-header">past scores!</h2>
+  <br><br>
+  <ul>
+    <% @games.each do |game| %>
+      <li><%= game.deck.title %> : <%= game.score %> out of  <%= game.deck.cards.size %></li>
+    <% end %>
+  </ul>
+</div>

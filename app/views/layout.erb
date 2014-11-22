@@ -19,7 +19,7 @@
   <nav>
     <div class="navbar">
       <% if current_user %>
-        <div class="login-name">Hi, <span class="name"><%= @user.name.capitalize %></span></div>
+        <div class="login-name">Hi, <a href="/users/<%= @user.id %>" class="name"><%= @user.name.capitalize %></a></div>
         <div class="login_container">
           <a href="/"><i class="fa fa-bolt"></i> Flash</a>
           <a href="/games/new">new game</a>
