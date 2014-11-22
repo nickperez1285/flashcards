@@ -1,10 +1,6 @@
-
-
-
-
-  deck1 = Deck.create(title: "Beers & Books")
-  deck2= Deck.create(title: "Num Nums")
-  deck3= Deck.create(title: "DBC 123")
+deck1 = Deck.create(title: "Beers & Books")
+deck2= Deck.create(title: "Num Nums")
+deck3= Deck.create(title: "DBC 123")
 
 
  deck1.cards << Card.create(question: "This tasty beer is a brown ale from England", answer:"new castle" )
