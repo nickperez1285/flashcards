@@ -1,12 +1,13 @@
 <h2 class="header"><i class="fa fa-bolt"></i></h2>
-<div class="notice"><p>"<%= @deck.title %>"</p></div>
+<div class="menu-header"><p>"<%= @deck.title %>"</p></div>
 
-
-  <form action="/games/create", method="post">
-    <input type="hidden" name="deck_id" value="<%= @deck.id  %>">
-    <input type="submit" value="Let's play">
-  </form>
 <div class="index_container">
+  <div class="play-game-btn">
+    <form action="/games/create", method="post">
+      <input type="hidden" name="deck_id" value="<%= @deck.id  %>">
+      <input type="submit" value="go!">
+    </form>
+  </div>
   <div class="deck-container">
     <% @cards.each do |card| %>
       <div class="deck">

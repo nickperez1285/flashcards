@@ -1,18 +1,34 @@
-
-<%= @card.question %>
-
-<div class="notice">
-  <p><%= @message %></p>
+<div class="end-container">
+  <div class="end-game-btn">
+  <form action="/games/<%= @game.id %>/over" method="get">
+    <input type="submit" value="end">
+  </form>
+  </div>
 </div>
-
-<a href="/games/<%= @game.id %>/over">end game</a>
-
-<form action= "/games/<%= @game.id %>/decks/<%= @deck.id %>/cards/<%= @card.id %>/compare" method= 'get'>
-
-<input type="text" name= "submitted_answer" />
-
-<input type="submit" vaule="Submit">
-</form>
-
-
-
+<div class="index_container">
+  <div class="game-notice">
+    <p><%= @message %></p>
+  </div>
+  <div class="deck-container">
+    <div class="card">
+        <div class="red-line"></div>
+        <div class="blue-line"></div>
+        <div class="blue-line"></div>
+        <div class="blue-line"></div>
+        <div class="blue-line"></div>
+        <div class="blue-line"></div>
+        <div class="blue-line"></div>
+        <div class="blue-line"></div>
+        <div class="blue-line"></div>
+        <div class="deck-description">
+            <p class="deck-title"><%= @card.question %></p>
+        </div>
+    </div><!-- Each card container -->
+  </div>
+  <div class="play-game-btn">
+    <form action= "/games/<%= @game.id %>/decks/<%= @deck.id %>/cards/<%= @card.id %>/compare" method= 'get'>
+      <input type="text" name= "submitted_answer" placeholder="you know this!">
+      <input type="submit" value="answer!">
+    </form>
+  </div>
+</div><!-- Index container -->
