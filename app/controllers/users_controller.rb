@@ -45,3 +45,10 @@ delete '/users/:user_id/delete_session' do
   redirect '/'
 end
 
+get '/users/:user_id' do
+  @user = User.find(params[:user_id])
+  @games = @user.games
+
+  erb :"users/show"
+end
+
