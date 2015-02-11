@@ -2,6 +2,7 @@
 
 
 
+User.create(name:"user", email:"user", password_hash:"pass")
 
   deck1 = Deck.create(title: "Beers & Books")
   deck2= Deck.create(title: "Num Nums")

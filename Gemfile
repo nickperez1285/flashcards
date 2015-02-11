@@ -15,7 +15,7 @@ gem 'rake'
 gem 'shotgun'
 
 gem 'bcrypt-ruby'
-
+gem 'rails_12factor', group: :production
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'
